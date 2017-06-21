@@ -2,7 +2,7 @@ package com.jos.dem.internationalization
 
 import javax.servlet.http.HttpServletRequest
 
-import com.jos.dem.vetlog.helper.LocaleResolver
+import com.jos.dem.internationalization.helper.LocaleResolver
 
 import spock.lang.Specification
 
