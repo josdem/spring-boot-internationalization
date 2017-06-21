@@ -4,6 +4,8 @@ import org.springframework.context.MessageSource
 import org.springframework.stereotype.Service
 import org.springframework.beans.factory.annotation.Autowired
 
+import javax.servlet.http.HttpServletRequest
+
 import com.jos.dem.internationalization.services.LocaleService
 import com.jos.dem.internationalization.helper.LocaleResolver
 
