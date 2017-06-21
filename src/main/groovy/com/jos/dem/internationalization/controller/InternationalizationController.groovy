@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.beans.factory.annotation.Autowired
 
+import javax.servlet.http.HttpServletRequest
+
 import com.jos.dem.internationalization.services.LocaleService
 
 @RestController
@@ -13,8 +15,8 @@ class InternationalizationController {
   LocaleService localeService
 
   @RequestMapping("/")
-  String index(){
-    localeService.getMessage('user.hello')
+  String index(HttpServletRequest request){
+    localeService.getMessage('user.hello', request)
   }
 
 }
