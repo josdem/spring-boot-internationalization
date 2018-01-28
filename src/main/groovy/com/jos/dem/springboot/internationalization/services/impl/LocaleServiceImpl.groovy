@@ -1,4 +1,4 @@
-package com.jos.dem.internationalization.services.impl
+package com.jos.dem.springboot.internationalization.services.impl
 
 import org.springframework.context.MessageSource
 import org.springframework.stereotype.Service
