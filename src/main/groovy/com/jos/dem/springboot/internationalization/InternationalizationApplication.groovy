@@ -1,4 +1,4 @@
-package com.jos.dem.internationalization
+package com.jos.dem.springboot.internationalization
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
