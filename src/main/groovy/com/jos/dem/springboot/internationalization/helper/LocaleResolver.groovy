@@ -1,4 +1,4 @@
-package com.jos.dem.internationalization.helper
+package com.jos.dem.springboot.internationalization.helper
 
 import org.springframework.stereotype.Component
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver
