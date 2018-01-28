@@ -1,4 +1,4 @@
-package com.jos.dem.internationalization.services.impl
+package com.jos.dem.springboot.internationalization.services.impl
 
 import org.springframework.context.MessageSource
 import org.springframework.stereotype.Service
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired
 
 import javax.servlet.http.HttpServletRequest
 
-import com.jos.dem.internationalization.services.LocaleService
-import com.jos.dem.internationalization.helper.LocaleResolver
+import com.jos.dem.springboot.internationalization.helper.LocaleResolver
+import com.jos.dem.springboot.internationalization.services.LocaleService
 
 @Service
 class LocaleServiceImpl implements LocaleService {

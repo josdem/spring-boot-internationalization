@@ -5,8 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.beans.factory.annotation.Autowired
 
 import javax.servlet.http.HttpServletRequest
-
-import com.jos.dem.internationalization.services.LocaleService
+import com.jos.dem.springboot.internationalization.services.LocaleService
 
 @RestController
 class InternationalizationController {
