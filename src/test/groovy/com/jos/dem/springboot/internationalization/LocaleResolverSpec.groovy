@@ -1,9 +1,7 @@
-package com.jos.dem.internationalization
+package com.jos.dem.springboot.internationalization
 
 import javax.servlet.http.HttpServletRequest
-
-import com.jos.dem.internationalization.helper.LocaleResolver
-
+import com.jos.dem.springboot.internationalization.helper.LocaleResolver
 import spock.lang.Specification
 
 class LocaleResolverSpec extends Specification {
