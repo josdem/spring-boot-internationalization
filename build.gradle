@@ -1,6 +1,8 @@
 buildscript {
   ext {
     springBootVersion = '2.1.1.RELEASE'
+    junitJupiterVersion = '5.3.2'
+    mockitoVersion = '2.23.4'
   }
   repositories {
     mavenCentral()
@@ -19,11 +21,20 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-	compile 'org.springframework.boot:spring-boot-starter-web'
-	testCompile 'org.springframework.boot:spring-boot-starter-test'
-	testCompile 'org.spockframework:spock-spring'
+  compile 'org.springframework.boot:spring-boot-starter-web'
+  testCompile "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
+  testRuntime "org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion"
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+  useJUnitPlatform()
+
+  reports {
+    html.enabled = true
+  }
 }
