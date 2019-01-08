@@ -21,10 +21,11 @@ public class LocaleResolver extends AcceptHeaderLocaleResolver {
 
   @Override
   public Locale resolveLocale(HttpServletRequest request) {
-    if (request.getHeader("Accept-Language") != null) {
+    String language = request.getHeader("Accept-Language");
+    if (language == null || language.isEmpty()) {
       return Locale.getDefault();
     }
-    List<Locale.LanguageRange> list = Locale.LanguageRange.parse(request.getHeader("Accept-Language"));
+    List<Locale.LanguageRange> list = Locale.LanguageRange.parse(language);
     Locale locale = Locale.lookup(list, LOCALES);
     return locale;
   }
