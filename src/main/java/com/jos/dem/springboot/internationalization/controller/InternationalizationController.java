@@ -1,21 +1,21 @@
-package com.jos.dem.springboot.internationalization.controller
+package com.jos.dem.springboot.internationalization.controller;
 
-import org.springframework.web.bind.annotation.RestController
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.http.HttpServletRequest
-import com.jos.dem.springboot.internationalization.services.LocaleService
+import javax.servlet.http.HttpServletRequest;
+import com.jos.dem.springboot.internationalization.services.LocaleService;
 
 @RestController
 class InternationalizationController {
 
   @Autowired
-  LocaleService localeService
+  private LocaleService localeService;
 
   @RequestMapping("/")
-  String index(HttpServletRequest request){
-    localeService.getMessage('user.hello', request)
+  public String index(HttpServletRequest request){
+    localeService.getMessage("user.hello", request);
   }
 
 }
