@@ -15,7 +15,7 @@ class InternationalizationController {
 
   @RequestMapping("/")
   public String index(HttpServletRequest request){
-    localeService.getMessage("user.hello", request);
+    return localeService.getMessage("user.hello", request);
   }
 
 }

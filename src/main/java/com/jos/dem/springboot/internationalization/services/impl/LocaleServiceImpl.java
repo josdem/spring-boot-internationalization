@@ -1,24 +1,24 @@
-package com.jos.dem.springboot.internationalization.services.impl
+package com.jos.dem.springboot.internationalization.services.impl;
 
-import org.springframework.context.MessageSource
-import org.springframework.stereotype.Service
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service;
+import org.springframework.context.MessageSource;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletRequest;
 
-import com.jos.dem.springboot.internationalization.helper.LocaleResolver
-import com.jos.dem.springboot.internationalization.services.LocaleService
+import com.jos.dem.springboot.internationalization.helper.LocaleResolver;
+import com.jos.dem.springboot.internationalization.services.LocaleService;
 
 @Service
-class LocaleServiceImpl implements LocaleService {
+public class LocaleServiceImpl implements LocaleService {
 
   @Autowired
-  MessageSource messageSource
+  private MessageSource messageSource;
   @Autowired
-  LocaleResolver localeResolver
+  private LocaleResolver localeResolver;
 
-  String getMessage(String code, HttpServletRequest request){
-    messageSource.getMessage(code, null, localeResolver.resolveLocale(request))
+  public String getMessage(String code, HttpServletRequest request){
+    return messageSource.getMessage(code, null, localeResolver.resolveLocale(request));
   }
 
 }
